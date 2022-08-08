@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>TailwindCSS</title>
+	<link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="bg-mainColor text-white"></body>
+
+<!-- -->
+<nav class="md:container mx-auto">
+	<div class="flex justify-between pt-big">
+		<span class="font-bold text-3xl">Tailwind</span>
+		<div class="space-x-5">
+			<a class="hover:underline" href="http://">About</a>
+			<a class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700" href="http://">Contacts</a>
+		</div>
+	</div>
+</nav>
+
+<main class="container mx-auto py-big">
+	<h1 class="text-center text-3xl">Tailwind CSS</h1>
+	<p class="pt-8 w-[450px] mx-auto">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident non qui
+		libero laboriosam voluptatem voluptatibus consequatur? Esse doloremque dolor odio optio neque. Error illo sed,
+		dolores ab quam voluptatibus?
+	</p>
+	<!-- use flex  -->
+	<div class="flex justify-center space-x-10 pt-big">
+		<div class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700">Button 1</div>
+		<div class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700">Button 2</div>
+		<div class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700">Button 3</div>
+		<div class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700">Button 4</div>
+		<div class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700">Button 5</div>
+	</div>
+
+	<!-- use grid -->
+	<div class="container mx-auto py-big grid grid-colums-4 grid-flow-col gap-4">
+		<div class="bg-purple-500 w-1/2 h-[100px]"></div>
+		<div class="bg-purple-500 w-3/5 h-[100px]"></div>
+		<div class="bg-purple-500 w-1/6 h-[100px]"></div>
+		<div class="bg-purple-500 w-full h-[100px]"></div>
+	</div>
+</main>
+
+</html>
