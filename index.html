@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en" class="dark">
 
 <head>
 	<meta charset="UTF-8" />
@@ -7,55 +7,80 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>TailwindCSS</title>
 	<link rel="stylesheet" href="./css/style.css" />
+	<script src="./script.js" defer></script>
 </head>
 
-<body class="bg-mainColor text-white align"></body>
+<body class="transition duration-1000
+bg-mainColorLight text-mainColorDark
+dark:bg-mainColorDark dark:text-mainColorLight
+"></body>
 
-<!-- -->
-<nav class="mx-auto px-1 sm:px-3 lg:px-5">
-	<div class="flex justify-between pt-big items-center">
+<!-- navigation -->
+<nav class="mx-auto px-1 
+	sm:px-3 
+	lg:px-5">
+	<div class="flex flex-col pt-big items-center space-y-5	justify-between
+	sm:flex-row
+	">
 		<span class="font-bold text-3xl">Tailwind</span>
-		<div class="space-x-2 sm:space-x-4 lg:space-x-6">
+		<div class="flex items-center space-x-2 
+		sm:space-x-4 
+		lg:space-x-6">
+			<!-- button day/night -->
+			<div class="text-xs btn-toggle container mx-auto mr-10 flex space-x-2 items-center">
+				<span>Day</span>
+				<div class="transition duration-1000 flex justify-end h-5 w-10 items-center rounded-full bg-mainColorDark
+		 dark:bg-mainColorLight dark:justify-start">
+					<div class="mx-1 absolute h-4 w-4 rounded-full bg-mainColorLight
+			dark:bg-mainColorDark "></div>
+				</div>
+				<span>Night</span>
+			</div>
 			<a class="hover:underline" href="">About</a>
-			<a class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700" href="">Contacts</a>
+			<a class="text-mainColorLight bg-red-500 py-2 px-4 rounded-full hover:bg-red-700" href="">
+				Contacts
+			</a>
 		</div>
 	</div>
 </nav>
 
 <main class="mx-auto py-big text-center">
-	<h1 class="text-center text-3xl">Tailwind CSS</h1>
-	<p class="pt-8 w-full sm:w-[450px] lg:w-[600px] mx-auto px-2">
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident non qui
-		libero laboriosam voluptatem voluptatibus consequatur? Esse doloremque dolor odio optio neque. Error illo sed,
-		dolores ab quam voluptatibus?
+	<h1 class="text-center text-3xl font-bold">Tailwind CSS</h1>
+	<p class="pt-8 w-full  mx-auto px-2 
+	sm:w-[450px] 
+	lg:w-[600px]">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident non qui libero laboriosam voluptatem
+		voluptatibus consequatur? Esse doloremque
+		dolor odio optio neque. Error illo sed, dolores ab quam voluptatibus?
 	</p>
-	<!-- use flex  -->
- 	<div class="
-	flex flex-col justify-center space-y-3 pt-big items-center mx-auto
-	sm:flex-row sm:flex-wrap sm:space-x-3 sm:items-baseline
-	">
- 		<div class='bg-red-500 py-2 px-4 rounded-full hover:bg-red-700'>Андрей</div>
- 		<div class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700">Кира</div>
- 		<div class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700">Александр</div>
- 		<div class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700">Василиса</div>
- 		<div class='bg-red-500 py-2 px-4 rounded-full hover:bg-red-700'>Ася</div>
- 	</div>
+		<!-- use flex  -->
+	<div class="flex flex-col justify-center space-y-3 pt-big items-center mx-auto text-mainColorLight
+		sm:flex-row sm:flex-wrap sm:space-x-3 sm:items-baseline">
+		<div class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700">Андрей</div>
+		<div class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700">Кира</div>
+		<div class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700">Александр</div>
+		<div class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700">Василиса</div>
+		<div class="bg-red-500 py-2 px-4 rounded-full hover:bg-red-700">Ася</div>
+		</div>
 
 	<!-- use grid -->
- 	<!-- <div class="container mx-auto py-big grid grid-colums-4 grid-flow-col gap-4">
+	<!-- <div class="container mx-auto py-big grid grid-colums-4 grid-flow-col gap-4">
 		<div class="bg-purple-500 w-1/2 h-[100px]"></div>
 		<div class="bg-purple-500 w-3/5 h-[100px]"></div>
 		<div class="bg-purple-500 w-1/6 h-[100px]"></div>
 		<div class="bg-purple-500 w-full h-[100px]"></div>
 	</div> -->
-<div class="sm:w-[90%] md:w-[80%] lg:w-[70%] aspect-[4/3] sm:px-3 lg:px-5 mx-auto pt-big sm:grid sm:space-y-0 space-y-2 grid-rows-3
-	grid-flow-row gap-4">
-	<div class=" bg-red-200 rounded-md row-span-2 col-span-2">1</div>
-	<div class=" bg-red-300 rounded-md col-start-3">2</div>
-	<div class=" bg-red-400 rounded-md ">3</div>
-	<div class=" bg-red-500 rounded-md  ">4</div>
-	<div class=" bg-red-600 rounded-md col-span-2 ">5</div>
-</div>
+	<div class="aspect-[4/3] sm:px-3 lg:px-5 mx-auto pt-big space-y-2 grid-rows-3
+		grid-flow-row gap-4
+		sm:grid sm:space-y-0 sm:w-[90%] 
+		md:w-[80%] 
+		lg:w-[70%]">
+		<div class="bg-red-200 rounded-md row-span-2 col-span-2">1</div>
+		<div class="bg-red-300 rounded-md col-start-3">2</div>
+		<div class="bg-red-400 rounded-md">3</div>
+		<div class="bg-red-500 rounded-md">4</div>
+		<div class="bg-red-600 rounded-md col-span-2">5</div>
+	</div>
 </main>
 
 </html>
