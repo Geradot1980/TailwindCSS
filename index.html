@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="./css/style.css" />
 </head>
 
-<body class="bg-mainColor text-white"></body>
+<body class="bg-mainColor text-white align"></body>
 
 <!-- -->
 <nav class="mx-auto px-1 sm:px-3 lg:px-5">
@@ -22,16 +22,16 @@
 	</div>
 </nav>
 
-<main class="mx-auto py-big">
+<main class="mx-auto py-big text-center">
 	<h1 class="text-center text-3xl">Tailwind CSS</h1>
-	<p class="pt-8 w-full sm:w-[450px] lg:w-[600px]  mx-auto px-2">
+	<p class="pt-8 w-full sm:w-[450px] lg:w-[600px] mx-auto px-2">
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident non qui
 		libero laboriosam voluptatem voluptatibus consequatur? Esse doloremque dolor odio optio neque. Error illo sed,
 		dolores ab quam voluptatibus?
 	</p>
 	<!-- use flex  -->
  	<div class="
-	flex flex-col justify-center space-y-3 pt-big items-center
+	flex flex-col justify-center space-y-3 pt-big items-center mx-auto
 	sm:flex-row sm:flex-wrap sm:space-x-3 sm:items-baseline
 	">
  		<div class='bg-red-500 py-2 px-4 rounded-full hover:bg-red-700'>Андрей</div>
@@ -48,6 +48,14 @@
 		<div class="bg-purple-500 w-1/6 h-[100px]"></div>
 		<div class="bg-purple-500 w-full h-[100px]"></div>
 	</div> -->
+<div class="sm:w-[90%] md:w-[80%] lg:w-[70%] aspect-[4/3] sm:px-3 lg:px-5 mx-auto pt-big sm:grid sm:space-y-0 space-y-2 grid-rows-3
+	grid-flow-row gap-4">
+	<div class=" bg-red-200 rounded-md row-span-2 col-span-2">1</div>
+	<div class=" bg-red-300 rounded-md col-start-3">2</div>
+	<div class=" bg-red-400 rounded-md ">3</div>
+	<div class=" bg-red-500 rounded-md  ">4</div>
+	<div class=" bg-red-600 rounded-md col-span-2 ">5</div>
+</div>
 </main>
 
 </html>
