@@ -2,6 +2,8 @@
  [Репозиторий с проектом](https://github.com/Geradot1980/TailwindCSS) 
  
   [www.tailwind-resp.geradot.st8.ru](http://tailwind-resp.geradot.st8.ru/)
+  
+  ![image](tailwindcss.jpg)
 
 ## Задачи (Тикеты)
 
